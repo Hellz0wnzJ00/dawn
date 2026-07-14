@@ -1,0 +1,409 @@
+/* ═══════════════════════════════════════════════════════════════
+   HELLZGATE — Shopify Custom CSS
+   Matches hellzgate.com exactly
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CSS Variables ─────────────────────────────────────────────*/
+:root {
+  --bg:         #080809;
+  --bg2:        #0f0f11;
+  --card:       #121214;
+  --line:       #1e1e22;
+  --red:        #ff2233;
+  --red-dim:    #c81826;
+  --red-glow:   rgba(255,34,51,.35);
+  --white:      #f4f4f5;
+  --gray:       #a1a1aa;
+  --dim:        #6b6b73;
+  --green:      #39d353;
+}
+
+/* ── Base Reset ────────────────────────────────────────────────*/
+body,
+.shopify-section {
+  background-color: var(--bg) !important;
+  color: var(--white) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography ────────────────────────────────────────────────*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4,
+.heading {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .05em !important;
+  color: var(--white) !important;
+  line-height: 1.1 !important;
+}
+
+.site-header__heading,
+.logo__text,
+.header__heading {
+  font-family: 'Anton', sans-serif !important;
+  letter-spacing: .03em !important;
+  color: var(--white) !important;
+}
+
+p, li, span, label, input, select, textarea {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: var(--gray) !important;
+}
+
+a {
+  color: var(--white) !important;
+  text-decoration: none !important;
+  transition: color .2s !important;
+}
+a:hover {
+  color: var(--red) !important;
+}
+
+/* ── Header / Navigation ───────────────────────────────────────*/
+.header,
+.site-header,
+.header-wrapper,
+[class*="header__inner"],
+.announcement-bar,
+sticky-header {
+  background: rgba(8,8,9,.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--line) !important;
+  color: var(--white) !important;
+}
+
+.header__menu-item,
+.site-nav__link,
+.header__nav a {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+  font-size: .9rem !important;
+  color: var(--gray) !important;
+  transition: color .2s !important;
+}
+.header__menu-item:hover,
+.site-nav__link:hover,
+.header__nav a:hover {
+  color: var(--white) !important;
+}
+
+.header__icon svg,
+.cart-count-bubble,
+.header__icon path {
+  color: var(--white) !important;
+  fill: var(--white) !important;
+}
+
+/* ── Announcement Bar ──────────────────────────────────────────*/
+.announcement-bar {
+  background: var(--red) !important;
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  font-size: .8rem !important;
+}
+.announcement-bar__message,
+.announcement-bar a {
+  color: #fff !important;
+}
+
+/* ── Main Content Background ───────────────────────────────────*/
+main,
+.main-content,
+#MainContent,
+.content-for-layout {
+  background-color: var(--bg) !important;
+}
+
+/* ── Sections ──────────────────────────────────────────────────*/
+.shopify-section,
+section {
+  background-color: var(--bg) !important;
+}
+
+.color-scheme-2,
+.background-secondary {
+  background-color: var(--bg2) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+/* ── Cards / Product Cards ─────────────────────────────────────*/
+.card,
+.card-wrapper,
+.product-card,
+.card__inner,
+[class*="card__information"],
+.grid__item .card {
+  background: linear-gradient(160deg, #141416, #0b0b0d) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  color: var(--white) !important;
+  overflow: hidden !important;
+}
+
+.card__heading,
+.card__title,
+.card-information__text a {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  color: var(--white) !important;
+}
+
+.price,
+.price__regular,
+.price-item,
+.price-item--regular {
+  color: var(--red) !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: .05em !important;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────*/
+.btn,
+.button,
+.shopify-payment-button__button,
+button[type="submit"],
+.product-form__submit,
+.cart__checkout-button {
+  background: var(--red) !important;
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .09em !important;
+  font-weight: 600 !important;
+  font-size: .92rem !important;
+  padding: 14px 28px !important;
+  border-radius: 4px !important;
+  border: 1px solid transparent !important;
+  cursor: pointer !important;
+  transition: all .2s !important;
+  box-shadow: none !important;
+}
+
+.btn:hover,
+.button:hover,
+.shopify-payment-button__button:hover,
+button[type="submit"]:hover,
+.product-form__submit:hover,
+.cart__checkout-button:hover {
+  background: var(--red-dim) !important;
+  box-shadow: 0 6px 26px var(--red-glow) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn--secondary,
+.button--secondary,
+[class*="button--outline"] {
+  background: transparent !important;
+  border: 1px solid var(--line) !important;
+  color: var(--white) !important;
+}
+.btn--secondary:hover,
+.button--secondary:hover {
+  border-color: var(--red) !important;
+  color: var(--red) !important;
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Forms / Inputs ────────────────────────────────────────────*/
+input,
+textarea,
+select,
+.field__input,
+.select__select {
+  background: var(--card) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 4px !important;
+  color: var(--white) !important;
+  font-family: 'Inter', sans-serif !important;
+  padding: 10px 14px !important;
+  transition: border-color .2s !important;
+}
+input:focus,
+textarea:focus,
+select:focus,
+.field__input:focus,
+.select__select:focus {
+  border-color: var(--red) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(255,34,51,.15) !important;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--dim) !important;
+}
+
+label,
+.field__label {
+  color: var(--gray) !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .1em !important;
+  font-size: .8rem !important;
+  font-weight: 600 !important;
+}
+
+/* ── Product Page ──────────────────────────────────────────────*/
+.product__title {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+  font-size: clamp(1.6rem, 4vw, 2.4rem) !important;
+  color: var(--white) !important;
+}
+
+.product__description,
+.product-description {
+  color: var(--gray) !important;
+  line-height: 1.7 !important;
+}
+
+.product-media-container,
+.product__media-wrapper {
+  background: linear-gradient(160deg, #141416, #0b0b0d) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.variant-input,
+fieldset [class*="variant"] {
+  background: var(--card) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--white) !important;
+}
+.variant-input:checked,
+.variant-input--active {
+  border-color: var(--red) !important;
+  background: rgba(255,34,51,.08) !important;
+  color: var(--red) !important;
+}
+
+/* ── Cart ──────────────────────────────────────────────────────*/
+.cart__items,
+.cart-items {
+  border-top: 1px solid var(--line) !important;
+}
+
+.cart-item,
+.cart__item {
+  border-bottom: 1px solid var(--line) !important;
+  padding: 20px 0 !important;
+}
+
+.cart__footer,
+.cart-footer {
+  background: var(--bg2) !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+.cart__subtotal,
+[class*="totals__total-value"] {
+  color: var(--white) !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.4rem !important;
+}
+
+/* ── Footer ────────────────────────────────────────────────────*/
+.footer,
+.site-footer,
+footer {
+  background: var(--bg2) !important;
+  border-top: 1px solid var(--line) !important;
+  color: var(--gray) !important;
+}
+
+.footer__heading,
+.footer-block__heading {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  color: var(--white) !important;
+  font-size: .85rem !important;
+  margin-bottom: 14px !important;
+}
+
+.footer__list-item a,
+.footer-block__list-item a,
+.list-social a {
+  color: var(--dim) !important;
+  font-size: .88rem !important;
+  transition: color .2s !important;
+}
+.footer__list-item a:hover,
+.footer-block__list-item a:hover,
+.list-social a:hover {
+  color: var(--red) !important;
+}
+
+.footer__copyright,
+[class*="footer__copyright"] {
+  color: var(--dim) !important;
+  font-size: .78rem !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+/* ── Breadcrumbs ───────────────────────────────────────────────*/
+.breadcrumb,
+nav[aria-label="breadcrumbs"] {
+  color: var(--dim) !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .1em !important;
+  font-size: .72rem !important;
+}
+.breadcrumb a { color: var(--gray) !important; }
+.breadcrumb a:hover { color: var(--red) !important; }
+
+/* ── Pagination ────────────────────────────────────────────────*/
+.pagination__item,
+.pagination .page {
+  border: 1px solid var(--line) !important;
+  background: var(--card) !important;
+  color: var(--white) !important;
+  font-family: 'Oswald', sans-serif !important;
+}
+.pagination__item--current,
+.pagination .page.is-current {
+  background: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #fff !important;
+}
+
+/* ── Loading Spinner ───────────────────────────────────────────*/
+.loading-overlay__spinner .spinner {
+  stroke: var(--red) !important;
+}
+
+/* ── Collection ────────────────────────────────────────────────*/
+.collection .title,
+.empty-page-content .title {
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  color: var(--white) !important;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────*/
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2a2a2e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red); }
+
+/* ── Selection ─────────────────────────────────────────────────*/
+::selection {
+  background: rgba(255,34,51,.3);
+  color: var(--white);
+}
